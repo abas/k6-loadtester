@@ -1,6 +1,6 @@
 # k6 Load Testing Script
 
-This repository contains a `k6` load testing script written in TypeScript, designed to dynamically handle payloads and headers using environment variables. 
+This repository contains a `k6` load testing script written in TypeScript, designed to dynamically handle payloads, headers, and HTTP methods using environment variables.
 
 ## Table of Contents
 
@@ -81,17 +81,20 @@ TARGET_URL=https://example.com/api/endpoint
 ITERATIONS=10
 TARGET_PAYLOAD=./payloads/payload.1.json
 TARGET_HEADERS=./headers/headers.json
+HTTP_METHOD=POST
 ```
 
-- **`TARGET_URL`**: The URL to which the POST request will be sent.
+- **`TARGET_URL`**: The URL to which the request will be sent.
 - **`ITERATIONS`**: The number of times the request will be sent.
 - **`TARGET_PAYLOAD`**: The path to the JSON file containing the request payload.
 - **`TARGET_HEADERS`**: The path to the JSON file containing the custom headers.
+- **`HTTP_METHOD`**: The HTTP method to use for the request. Supported values are `POST`, `GET`, `PUT`, and `DELETE`. Defaults to `POST` if not specified.
 
 ## Notes
 
 - Ensure that the `payloads` and `headers` folders exist in the `src` directory and contain the appropriate files as specified in the `.env` file.
 - The `payloads` folder should contain JSON files with request payloads.
 - The `headers` folder should contain JSON files with custom headers.
+- The `HTTP_METHOD` variable allows you to specify the request method dynamically.
 
 Feel free to customize the `.env` file according to your testing needs.
