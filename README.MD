@@ -15,11 +15,9 @@ This repository contains a `k6` load testing script written in TypeScript, desig
 To clone this repository, use the following command:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/abas/k6-loadtester.git
+cd k6-loadtester
 ```
-
-Replace `your-username` and `your-repo` with your GitHub username and repository name, respectively.
 
 ## Installation
 
