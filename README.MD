@@ -2,6 +2,9 @@
 
 This repository contains a `k6` load testing script written in TypeScript, designed to dynamically handle payloads, headers, and HTTP methods using environment variables.
 
+## PRE-Requirement
+- NodeJS v22.5.1
+
 ## Table of Contents
 
 - [Cloning the Repository](#cloning-the-repository)
