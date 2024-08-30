@@ -1,0 +1,21 @@
+{
+  "name": "k6-loadtest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "copy:payload": "cp -r src/payloads dist/payloads",
+    "copy:header": "cp -r src/headers dist/headers",
+    "postbuild": "yarn copy:payload && yarn copy:header",
+    "run:test": "export $(cat .env | xargs) && k6 run dist/index.js",
+    "test": "yarn build && yarn postbuild && yarn run:test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/k6": "^0.53.1",
+    "typescript": "^5.5.4"
+  }
+}

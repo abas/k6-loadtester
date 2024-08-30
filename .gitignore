@@ -1,0 +1,7 @@
+node_modules
+.env
+dist
+!src/payloads/example.payload.json
+!src/headers/example.header.json
+src/headers/*
+src/payload/*
